@@ -11,7 +11,9 @@
     "express",
     "mongodb",
     "mongoose",
-    "ejs"
+    "ejs",
+    "passport",
+    "mapbox"
   ],
   "author": "James Kernicky",
   "license": "MIT",
