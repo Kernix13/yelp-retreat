@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const seedRetreats = require('./seedRetreats');
 const Retreat = require('../models/retreat');
+const Review = require('../models/review');
 
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-retreat');
 
@@ -11,7 +12,10 @@ db.once("open", () => {
 });
 
 const seedDB = async () => {
+  // Delete retreats and reviews before reseeding the DB
   await Retreat.deleteMany({});
+  await Review.deleteMany({});
+
   for (let i = 0; i < seedRetreats.length; i++) {
     const retreat = new Retreat({
       author: '647e595464c70dd9a61869cb',
