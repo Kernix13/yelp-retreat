@@ -13,7 +13,7 @@ A fullstack app variation of Colt Steele's YelpCamp project from his Udemy cours
 
 > _That's it for now..._
 
-Main packages used for this app:
+Main tools and technologies used for this app:
 
 1. Express
 2. MongoDB and Mongoose
@@ -47,13 +47,14 @@ Notes on the status and problems that need fixing.
 1. Need to add more retreats and in more categories, then map thru each category and cap the output to maybe the top 5 with a link to a category page for the complete list.
 2. Need more margin/padding around All Retreats and and the Add New button.
 3. Neeed to put a limit to the length of the description. Right now I hardly have any text, but I should set it to a max char limit.
-4. Bootstrap issue: How to make sure the card body and image height are equal?
+4. Bootstrap issue: How to make sure the card body and image height are equal? I may cut the description and vertical cards
 
 ### Show page
 
 1. The popup flag has a dark X for close, but it should be white.
 2. Retreat authors should not be able to add a review for their retreat unless they added the retreat but are _not_ the owner of the location.
 3. Why does the popup close button look different than on the index page?
+4. overall review - add all stars and / by .length
 
 ## Contributions
 
