@@ -1,0 +1,82 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">Edit Retreat</h1>
+  <div class="col-6 offset-3 bg-dark-subtle p-3">
+    <form action="/retreats/<%= retreat._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Name: </label>
+        <input value="<%= retreat.title %>" type="text" id="title" name="retreat[title]"
+          class="form-control border border-secondary" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="type" class="form-label">Type: </label>
+        <input value="<%= retreat.type %>" type="text" id="type" name="retreat[type]" class="form-control border border-secondary" required>
+        <!-- <select name="retreat[type]" id="type">
+          <option value="yoga">yoga</option>
+          <option value="meditation">meditation</option>
+          <option value="spiritual">spiritual</option>
+          <option value="spa">spa</option>
+        </select> -->
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location: </label>
+        <input value="<%= retreat.location %>" type="text" id="location" name="retreat[location]"
+          class="form-control border border-secondary" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date: </label>
+        <input value="<%= retreat.date %>" type="text" id="date" name="retreat[date]" class="form-control border border-secondary" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="events" class="form-label">Events: </label>
+        <input value="<%= retreat.events %>" type="text" id="events" name="retreat[events]" class="form-control border border-secondary" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Retreat Price: </label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input value="<%= retreat.price %>" type="number" step="0.01" min="0"
+            class="form-control form-control border border-secondary" id="price" aria-describedby="price"
+            placeholder="0.00" name="retreat[price]" required>
+          <!-- <input type="text" class="form-control form-control border border-secondary" id="price" aria-describedby="price"
+            placeholder="0.00" name="retreat[price]" required> -->
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description: </label>
+        <textarea name="retreat[description]" id="description"
+          class="form-control border border-secondary" required><%= retreat.description %></textarea>
+      </div>
+      
+      <div class="mb-3">
+        <label for="image" class="form-label">Add more images...</label>
+        <input type="file" name="image" id="image" class="form-control border-bottom border-secondary" multiple>
+      </div>
+
+      <div class="mb-3">
+        <% retreat.images.forEach((img, i)=> { %>
+          <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input border border-secondary" type="checkbox" id="image-<%= i %>" name="deleteImages[]"
+              value="<%= img.filename %>">
+            <label class="form-check-label" for="image-<%= i %>">Delete</label>
+          </div>
+          <% }) %>
+      </div>
+
+      <div class="mb-3 mt-4">
+        <button class="btn btn-info">Update Retreat</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-6 offset-3">
+    <a class="btn btn-secondary mx-auto my-3" href="/retreats/<%= retreat._id %>">Back to Retreat</a>
+  </div>
+</div>

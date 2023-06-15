@@ -1,0 +1,28 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container container-fluid">
+    <a class="navbar-brand" href="/">YelpRetreat</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/retreats">Retreats</a></li>
+        <li class="nav-item"><a class="nav-link" href="/retreats/new">New Retreat</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if(!currentUser) { %>
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+        <% } else { %>
+          <li class="nav-item nav-link text-warning"><strong>
+              <%= currentUser.username %>
+            </strong></li>
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        <% } %>
+      </ul>
+
+    </div>
+  </div>
+</nav>

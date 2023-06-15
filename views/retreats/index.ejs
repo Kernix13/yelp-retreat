@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') %>
+<div id="map" class="index-map"></div>
+<h1 class="my-3">All Retreats</h1>
+<div>
+  <a class="btn btn-success mb-3" href="/retreats/new">Add New Retreat</a>
+</div>
+<div class="main-list">
+  <% for (let retreat of retreats) { %>
+    <div class="card mb-5">
+      <div class="row">
+        <div class="col-md-5 px-0">
+          <% if(retreat.images.length) { %>
+            <img src="<%= retreat.images[0].url %>" alt="<%= retreat.title %>"class="img-fluid">
+          <% } else { %>
+            <img src="https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/wnbvbiv2zqqwkykp3hrw.jpg"
+              alt="<%= retreat.title %>" class="img-fluid">
+            <% } %>
+        </div>
+        <div class="col-md-7 bg-dark-subtle">
+          <div class="card-body">
+            <h2 class="card-title">
+              <%= retreat.title %>
+            </h2>
+            <p class="card-text text-secondary">
+              <%= retreat.location %>
+            </p>
+            <p class="card-text">
+              <%= retreat.description %>
+            </p>
+            <p class="card-text">
+              <%= retreat.date %>
+            </p>
+            <p><strong>$<%= retreat.price %></strong></p>
+            <a href="/retreats/<%= retreat._id %>" class="btn btn-primary">Go To <%= retreat.title %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+<script>
+  const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+  const retreats = { features: <%- JSON.stringify(retreats) %>};
+</script>
+
+<script src="/js/clusterMap.js"></script>
