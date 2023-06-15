@@ -32,6 +32,8 @@ npm start
 nodemon app.js
 ```
 
+Then create `.env` and copy/paste the contents from `.env.sample` and add your variable values.
+
 ## Current Status
 
 Notes on the status and problems that need fixing.
@@ -42,16 +44,16 @@ Notes on the status and problems that need fixing.
 
 ### Index page
 
-1. Need to add more retreats and in more categories, then map thru each category and cap the output to the top 5 with a link to a category page for a complete list
-2. Need way more margin/paddingaround All Retreats and and the Add New button
-3. Neeed to put a limit to the description. Right now I hardly have any text, but I seshould set it to a max char limit.
+1. Need to add more retreats and in more categories, then map thru each category and cap the output to maybe the top 5 with a link to a category page for the complete list.
+2. Need more margin/padding around All Retreats and and the Add New button.
+3. Neeed to put a limit to the length of the description. Right now I hardly have any text, but I should set it to a max char limit.
 4. Bootstrap issue: How to make sure the card body and image height are equal?
 
 ### Show page
 
-1. show page flag has a dark X for close
-2. retreat authors should not be able to add a review for their retreat unless they added the retreat but are not the owner of the location
-3. Why does the popup close button look different than the index page
+1. The popup flag has a dark X for close, but it should be white.
+2. Retreat authors should not be able to add a review for their retreat unless they added the retreat but are _not_ the owner of the location.
+3. Why does the popup close button look different than on the index page?
 
 ## Contributions
 
