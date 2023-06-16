@@ -30,6 +30,23 @@ h6 {
   font-family: 'Merriweather', Palatino, Georgia, 'Lucida Bright', Garamond, Didot, 'Times New Roman', serif;
 }
 
+.card-title.index {
+  font-size: 1.25rem;
+}
+
+.card-text.index {
+  font-size: 0.875rem;
+}
+
+.small {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+
+.btn.index {
+  font-size: 0.875rem;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   opacity: 0.95;

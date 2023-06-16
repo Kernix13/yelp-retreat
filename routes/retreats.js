@@ -16,6 +16,9 @@ router.route('/')
     validateRetreat,
     catchAsync(retreats.createRetreat));
 
+router.route('/category/:type')
+  .get(catchAsync(retreats.category))
+
 router.get('/new', 
   isLoggedIn, 
   retreats.renderNewForm);

@@ -46,7 +46,7 @@
           <li class="list-group-item border-bottom border-dark-subtle">Retreat Type: <%= retreat.type %></li>
           <li class="list-group-item border-bottom border-dark-subtle">Price: $<%= retreat.price %></li>
           <li class="list-group-item border-bottom border-dark-subtle">Date(s): <%= retreat.date %></li>
-          <li class="list-group-item">Events: <%= retreat.events %></li>
+          <li class="list-group-item">Events: <%= retreat.events.split(',').join(', ') %></li>
         </ul>
       </div>
       <% if (currentUser && retreat.author.equals(currentUser._id)) { %>
