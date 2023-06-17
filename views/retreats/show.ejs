@@ -43,7 +43,7 @@
           </li>
           <li class="list-group-item">Retreat owner: <strong>
               <%= retreat.author.username %></strong></li>
-          <li class="list-group-item border-bottom border-dark-subtle">Retreat Type: <%= retreat.type %></li>
+          <li class="list-group-item border-bottom border-dark-subtle">Retreat Type: <a href="category/<%= retreat.type %>"><%= retreat.type %></a></li>
           <li class="list-group-item border-bottom border-dark-subtle">Price: $<%= retreat.price %></li>
           <li class="list-group-item border-bottom border-dark-subtle">Date(s): <%= retreat.date %></li>
           <li class="list-group-item">Events: <%= retreat.events.split(',').join(', ') %></li>
