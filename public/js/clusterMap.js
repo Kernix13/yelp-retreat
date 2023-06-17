@@ -7,6 +7,9 @@ const map = new mapboxgl.Map({
   zoom: 3,
 });
 
+// disable map zoom when using scroll
+map.scrollZoom.disable();
+
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
