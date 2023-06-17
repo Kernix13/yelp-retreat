@@ -10,28 +10,31 @@
     <div class="d-flex flex-wrap card border border-white mb-3">
       <div class="row">
         <% for (let retreat of retreats) { %>
-          <% if (retreat.type === type) { %>
+          <% if (retreat.type===type) { %>
             <div class="col-md-4 mb-4">
               <% if(retreat.images.length) { %>
-                <img src="<%= retreat.images[0].url %>" alt="<%= retreat.title %>"class="img-fluid">
+                <img src="<%= retreat.images[0].url %>" alt="<%= retreat.title %>" class="img-fluid" />
               <% } else { %>
-                <img src="https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/wnbvbiv2zqqwkykp3hrw.jpg"
-                  alt="<%= retreat.title %>" class="img-fluid">
+                <img
+                  src="https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/wnbvbiv2zqqwkykp3hrw.jpg"
+                  alt="<%= retreat.title %>" class="img-fluid" />
               <% } %>
-              <div class="card-body border border-secondary">
-                <h3 class="card-title index">
-                  <%= retreat.title %>
-                </h3>
-                <p class="card-text index"><%= retreat.type %> RETREAT</p>
-                <p class="card-text index text-secondary">
-                  <%= retreat.location %>
-                </p>
-                <p class="card-text index">
-                  <%= retreat.date %>
-                </p>
-                <p class="card-text index"><strong>$<%= retreat.price %></strong></p>
-                <a href="/retreats/<%= retreat._id %>" class="btn btn-primary index">Go To <%= retreat.title %></a>
-              </div>
+                <div class="card-body border border-secondary">
+                  <h3 class="card-title index">
+                    <%= retreat.title %>
+                  </h3>
+                  <p class="card-text index">
+                    <%= retreat.type %> RETREAT
+                  </p>
+                  <p class="card-text index text-secondary">
+                    <%= retreat.location %>
+                  </p>
+                  <p class="card-text index">
+                    <%= retreat.date %>
+                  </p>
+                  <p class="card-text index"><strong>$<%= retreat.price %></strong></p>
+                  <a href="/retreats/<%= retreat._id %>" class="btn btn-primary index">Go To <%= retreat.title %></a>
+                </div>
             </div>
           <% } %>
         <% } %>
