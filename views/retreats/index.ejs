@@ -1,12 +1,12 @@
 <% layout('layouts/boilerplate') %>
-<div id="map" class="index-map"></div>
 <h1 class="my-3">All Retreats</h1>
 <div>
   <a class="btn btn-success mb-3" href="/retreats/new">Add New Retreat</a>
 </div>
+<div id="map" class="index-map"></div>
 <div class="main-list">
   <% for (let type of typesArr) { %>
-    <h2 class="category"><%= type %> RETREATS</h2>
+    <h2 class="category"><a href="retreats/category/<%= type %>"><%= type %> RETREATS</a></h2>
     <div class="d-flex flex-wrap card border border-white mb-3">
       <div class="row">
         <% for (let retreat of retreats) { %>
