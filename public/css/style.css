@@ -47,14 +47,14 @@ h6 {
   font-size: 0.875rem;
 }
 
+.category {
+  padding: 2em 0 0.5em;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   opacity: 0.95;
 }
-
-// .img-fluid {
-//   max-height: 100%;
-// }
 
 .card-text {
   margin-bottom: 0.5em;
@@ -87,6 +87,10 @@ h6 {
 .index-map {
   width: 100%;
   height: 25em;
+}
+
+.category-list {
+  margin-top: 3em;
 }
 
 .show-map {
