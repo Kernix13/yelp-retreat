@@ -9,7 +9,10 @@ A fullstack app variation of Colt Steele's YelpCamp project from his Udemy cours
 3. Spiritual
 4. Yoga
 5. Adventure
-6. Others to be added: Digital Detax, Nature, Wellness, Weight Loss, Fitness, Addiciton, ...
+6. Nature
+7. Fitness
+8. Detox
+9. Others to be added: Camping, Wellness, Weight Loss, ...
 
 > _That's it for now..._
 
@@ -55,6 +58,10 @@ Notes on the status and problems that need fixing.
 2. Retreat authors should not be able to add a review for their retreat unless they added the retreat but are _not_ the owner of the location.
 3. Why does the popup close button look different than on the index page?
 4. overall review - add all stars and / by .length
+
+### Login page
+
+1. Does not redirect to the last paage you were on - it goes to `/retreats` everytime. Look into `res.locals`.
 
 ## Contributions
 
