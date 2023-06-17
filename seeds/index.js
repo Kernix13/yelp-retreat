@@ -1,10 +1,17 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const cities = require('./cities');
 const { places, descriptors, retreatTypes } = require('./seedHelpers');
 const Retreat = require('../models/retreat');
 const Review = require('../models/review');
 
-mongoose.connect('mongodb://127.0.0.1:27017/yelp-retreat');
+/* Below is for production */
+const dbUrl = process.env.DB_URL;
+
+/* Below is for development */
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
+
+mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -24,7 +31,11 @@ const seedDB = async () => {
     const rand8 = Math.floor(Math.random() * 8);
     const price = Math.floor(Math.random() * 400) + 10;
     const retreat = new Retreat({
-      author: '647e595464c70dd9a61869cb',
+      // localhost jimbo _id:
+      // author: '647e595464c70dd9a61869cb',
+      
+      // MongoDB Atlas JimK _id:
+      author: '6489dd2bec11d7249ba3dd46',
       location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores vero perferendis laudantium, consequuntur voluptatibus nulla architecto, sit soluta esse iure sed labore ipsam a cum nihil atque molestiae deserunt!',

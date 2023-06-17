@@ -41,6 +41,25 @@ Then create `.env` and copy/paste the contents from `.env.sample` and add your v
 
 Notes on the status and problems that need fixing.
 
+### Seeding Mongo DB
+
+In both of the files listed below, you need to change dbUrl depending on whether you are trying to seed Mongo on localhost for development or on Atlas for production. You should only seed Atlas once unless your "production" is just a portfolio project like mine. Here is the code in each file:
+
+```js
+/* Below is for production */
+const dbUrl = process.env.DB_URL;
+
+/* Below is for development */
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
+
+mongoose.connect(dbUrl);
+```
+
+1. `app.js`: `dbUrl` is currently on lines 30 and 33
+2. `seeds/index.js`: `dbUrl` is currently on lines 9 and 12
+
+Also, if you are continuing to make changes locally and pushing the changes to GitHub, make sure to switch the databases back to Atlas if you have Auto-Deploy on Render set to Yes.
+
 ### HOSTING
 
 1. Render or Cyclic: Cyclic has 1 button deploy

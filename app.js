@@ -27,10 +27,10 @@ const reviewsRoutes = require('./routes/reviews.js');
 const userRoutes = require('./routes/users');
 
 /* Below is for production */
-// const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL;
 
 /* Below is for development */
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
 
 mongoose.connect(dbUrl);
 // mongoose.connect('mongodb://127.0.0.1:27017/yelp-retreat');
