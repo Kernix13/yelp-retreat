@@ -4,18 +4,19 @@ const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 const { cloudinary } = require('../cloudinary');
 
-// 1. Index route 
+// 1a. Index route 
 module.exports.index = async (req, res) => {
   const retreats = await Retreat.find({});
   res.render('retreats/index', { retreats, typesArr })
 }
 
-// Category route
+// 1b. Category route
 const typesArr = ['YOGA', 'MEDITATION', 'SPIRITUAL', 'SPA', 'NATURE', 'ADVENTURE', 'FITNESS', 'DETOX'];
+
 module.exports.category = async (req, res) => {
-  const pageType = req.params.type.toUpperCase()
+  const pageType = req.params.type;
+  // const pageType = req.params.type.toUpperCase();
   const retreats = await Retreat.find({type: pageType});
-  console.log(pageType)
   res.render('retreats/category', { retreats, typesArr, pageType })
 }
 
