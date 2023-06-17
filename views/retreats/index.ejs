@@ -1,12 +1,24 @@
 <% layout('layouts/boilerplate') %>
+<div id="all-retreats"></div>
 <h1 class="my-3">All Retreats</h1>
+<ul class="index-categories d-flex flex-wrap flex-lg-nowrap justify-content-lg-between mb-5 gap-2">
+  <li><a href="#YOGA">YOGA</a></li>
+  <li><a href="#MEDITATION">MEDITATION</a></li>
+  <li><a href="#SPIRITUAL">SPIRITUAL</a></li>
+  <li><a href="#SPA">SPA</a></li>
+  <li><a href="#NATURE">NATURE</a></li>
+  <li><a href="#ADVENTURE">ADVENTURE</a></li>
+  <li><a href="#FITNESS">FITNESS</a></li>
+  <li class="ml-3"><a href="#DETOX">DETOX</a></li>
+</ul>
 <div>
   <a class="btn btn-success mb-3" href="/retreats/new">Add New Retreat</a>
 </div>
 <div id="map" class="index-map"></div>
 <div class="main-list">
+  <button class="scrollToTopBtn"><span></span></button>
   <% for (let type of typesArr) { %>
-    <h2 class="category"><a href="retreats/category/<%= type %>"><%= type %> RETREATS</a></h2>
+    <h2 id="<%= type %>" class="category"><a href="retreats/category/<%= type %>"><%= type %> RETREATS</a></h2>
     <div class="d-flex flex-wrap card border border-white mb-3">
       <div class="row">
         <% for (let retreat of retreats) { %>
@@ -49,3 +61,4 @@
 </script>
 
 <script src="/js/clusterMap.js"></script>
+<script src="/js/scrollToTop.js"></script>
