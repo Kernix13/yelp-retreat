@@ -1,3 +1,4 @@
+const mongoose = require('mongoose'); // added because of Render deploy errors
 const MongoStore = require('connect-mongo');
 
 /* Below is for production */
@@ -5,6 +6,8 @@ const dbUrl = process.env.DB_URL;
 
 /* Below is for development */
 // const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
+
+mongoose.connect(dbUrl); // added because of Render deploy errors
 
 const secret = process.env.SECRET || 'yoursecrethere';
 
