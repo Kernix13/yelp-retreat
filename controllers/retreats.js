@@ -17,7 +17,6 @@ module.exports.category = async (req, res) => {
   const pageType = req.params.type;
   // const pageType = req.params.type.toUpperCase();
   const retreats = await Retreat.find({type: pageType});
-  console.log(retreats.length)
   res.render('retreats/category', { retreats, typesArr, pageType })
 }
 
