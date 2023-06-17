@@ -18,7 +18,7 @@ const marker = new mapboxgl.Marker({
   .setPopup(
     new mapboxgl.Popup({offset: 25})
     .setHTML(
-      `<h6>${retreat.title}</h6><p><em>${retreat.location}</em></p>`
+      `<h6>${retreat.location}</h6><p>Lat: ${retreat.geometry.coordinates[1].toFixed(3)}, Long: ${retreat.geometry.coordinates[0].toFixed(3)}</p>`
     )
   )
   .addTo(map);

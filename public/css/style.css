@@ -72,6 +72,10 @@ h6 {
 .mapboxgl-popup-content a:hover {
   color: rgb(83, 181, 255);
 }
+.mapboxgl-popup-content h6 {
+  padding-right: 0.5em;
+  text-align: left;
+}
 .mapboxgl-popup-content p {
   padding: 0;
   margin: 0;
