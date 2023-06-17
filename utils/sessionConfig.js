@@ -1,12 +1,12 @@
 const MongoStore = require('connect-mongo');
 
 /* Below is for production */
-// const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL;
 
 /* Below is for development */
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-retreat';
 
-const secret = process.env.SECRET || 'firstfullstackapp';
+const secret = process.env.SECRET || 'yoursecrethere';
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
