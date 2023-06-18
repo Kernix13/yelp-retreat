@@ -107,3 +107,20 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`LISTENING ON PORT ${port}`);
 });
+
+/*
+  Completed:
+  ✅ - Limited index page to 6 results per category
+  ✅ - Added Back To Top button for index page
+  ✅ - Created category route with count of retreats added to page
+  ✅ - Added Type to clusterMap popup
+  ✅ - Added Lat & Long to showPageMap popup
+  ✅ - Removed scroll/zoom functionality for index and category clusterMap
+
+  To-Do's:
+  1. Prevent retreat owners from reviewing their retreat
+  2. create a total average review rating
+  3. redirect to last page on login form submit
+  4. better styling for MapBox popup styling
+  5. I do not like the category anchor links on index - redesign
+*/
