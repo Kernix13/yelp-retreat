@@ -1,8 +1,10 @@
 # Full-Stack YelpRetreat App
 
+Check out the [Live Version](https://yelp-retreat.onrender.com/) on Render.com
+
 ## Overview
 
-A fullstack app variation of Colt Steele's YelpCamp project from his Udemy course _The WEb DEveloper Bootcamp 2023_. YelpRetreat has various "wellness" retreats separated by category:
+A fullstack app variation of Colt Steele's YelpCamp project from his Udemy course _The Web Developer Bootcamp 2023_. YelpRetreat has various "wellness" retreats separated by category:
 
 1. Spa
 2. Meditation
@@ -12,9 +14,7 @@ A fullstack app variation of Colt Steele's YelpCamp project from his Udemy cours
 6. Nature
 7. Fitness
 8. Detox
-9. Others to be added: Camping, Wellness, Weight Loss, ...
-
-> _That's it for now..._
+9. Others to be added: Camping, Wellness, Weight Loss, Recovery, ...
 
 Main tools and technologies used for this app:
 
@@ -35,7 +35,25 @@ npm start
 nodemon app.js
 ```
 
-Then create `.env` and copy/paste the contents from `.env.sample` and add your variable values.
+Then create `.env` and copy/paste the contents from `.env.sample` and add your environment variable values.
+
+To work locally you need to download and install MongoDB and the MongoDB Shell. Here are the commands I run on Windows:
+
+```sh
+# Open a Git Bash terminal and start up the DB
+mongod
+# Open a PowerShell terminal and start the Mongo Shell
+mongosh
+# Here are useful commands for the Mongo Shell
+# Show a list of all your databases
+show dbs
+# Use a specific database
+use dbName
+# Show all the collections for the database you are using
+show collections
+# Find all the records in a specific collection
+db.collectionName.find()
+```
 
 ## Current Status
 
@@ -43,7 +61,10 @@ Notes on the status and problems that need fixing.
 
 ### Seeding Mongo DB
 
-In both of the files listed below, you need to change dbUrl depending on whether you are trying to seed Mongo on localhost for development or on Atlas for production. You should only seed Atlas once unless your "production" is just a portfolio project like mine. Here is the code in each file:
+1. `app.js`: `dbUrl` is currently on lines 30 and 33
+2. `seeds/index.js`: `dbUrl` is currently on lines 9 and 12
+
+In both of the files listed above, you need to change `dbUrl` depending on whether you are trying to seed Mongo on localhost for development or on Atlas for production. You should only seed Atlas once unless your "production" is just a portfolio project like mine. Here is the code in each file:
 
 ```js
 /* Below is for production */
@@ -55,28 +76,17 @@ const dbUrl = process.env.DB_URL;
 mongoose.connect(dbUrl);
 ```
 
-1. `app.js`: `dbUrl` is currently on lines 30 and 33
-2. `seeds/index.js`: `dbUrl` is currently on lines 9 and 12
-
 Also, if you are continuing to make changes locally and pushing the changes to GitHub, make sure to switch the databases back to Atlas if you have Auto-Deploy on Render set to Yes.
-
-### HOSTING
-
-1. Render or Cyclic: Cyclic has 1 button deploy
 
 ### Index page
 
-1. Need to add more retreats and in more categories, then map thru each category and cap the output to maybe the top 5 with a link to a category page for the complete list.
-2. Need more margin/padding around All Retreats and and the Add New button.
-3. Neeed to put a limit to the length of the description. Right now I hardly have any text, but I should set it to a max char limit.
-4. Bootstrap issue: How to make sure the card body and image height are equal? I may cut the description and vertical cards
+1. I was able to cap the output to 6 retreats per category.
+1. I also added a Back-To-Top button which is helpful now and for when I add more categories.
 
 ### Show page
 
-1. The popup flag has a dark X for close, but it should be white.
-2. Retreat authors should not be able to add a review for their retreat unless they added the retreat but are _not_ the owner of the location.
-3. Why does the popup close button look different than on the index page?
-4. overall review - add all stars and / by .length
+1. Retreat authors should not be able to add a review for their retreat unless they added the retreat but are _not_ the owner of the location.
+1. Average review - add all stars and / by `.length` to get a value like _4.5/5_
 
 ### Login page
 
