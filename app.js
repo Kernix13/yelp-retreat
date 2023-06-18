@@ -115,12 +115,12 @@ app.listen(port, () => {
   ✅ - Created category route with count of retreats added to page
   ✅ - Added Type to clusterMap popup
   ✅ - Added Lat & Long to showPageMap popup
-  ✅ - Removed scroll/zoom functionality for index and category clusterMap
+  ✅ - Removed zoom on scroll for index & category clusterMap
 
   To-Do's:
   1. Prevent retreat owners from reviewing their retreat
   2. create a total average review rating
   3. redirect to last page on login form submit
   4. better styling for MapBox popup styling
-  5. I do not like the category anchor links on index - redesign
+  5. I do not like the category anchor links on index (redesign)
 */
