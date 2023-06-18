@@ -18,11 +18,13 @@
 <div class="main-list">
   <button class="scrollToTopBtn"><span></span></button>
   <% for (let type of typesArr) { %>
-    <h2 id="<%= type %>" class="category"><a href="retreats/category/<%= type %>"><%= type %> RETREATS</a></h2>
+    <% let count = 0 %>
+    <h2 id="<%= type %>" class="category"><%= type %> RETREATS</h2>
     <div class="d-flex flex-wrap card border border-white mb-3">
       <div class="row">
         <% for (let retreat of retreats) { %>
           <% if (retreat.type===type) { %>
+            <% count++ %>
             <div class="col-md-4 mb-4">
               <% if(retreat.images.length) { %>
                 <img src="<%= retreat.images[0].url %>" alt="<%= retreat.title %>" class="img-fluid" />
@@ -48,9 +50,13 @@
                   <a href="/retreats/<%= retreat._id %>" class="btn btn-primary index">Go To <%= retreat.title %></a>
                 </div>
             </div>
+            <% if (count > 5) { %>
+              <% break %>
+            <% } %>
           <% } %>
         <% } %>
       </div>
+      <p>&gt; <a href="retreats/category/<%= type %>">See all <%= type %> retreats</a></p>
     </div>
   <% } %>
 </div>
