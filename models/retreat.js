@@ -45,7 +45,7 @@ const RetreatSchema = new Schema({
 }, opts)
 
 RetreatSchema.virtual('properties.popUpMarkup').get(function() {
-  return `<h6><a href="/retreats/${this._id}">${this.title}</a></h6><p><em>${this.location}</em></p>`;
+  return `<h6><a href="/retreats/${this._id}">${this.title}</a></h6><p>Type: ${this.type}</p><p><em>${this.location}</em></p>`;
 })
 
 RetreatSchema.post('findOneAndDelete', async function(doc) {
