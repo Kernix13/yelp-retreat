@@ -48,7 +48,7 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Form middleware
+// Forms
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
@@ -103,7 +103,6 @@ app.use((err, req, res, next) => {
 })
 
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
   console.log(`LISTENING ON PORT ${port}`);
 });
@@ -118,9 +117,12 @@ app.listen(port, () => {
   ✅ - Removed zoom on scroll for index & category clusterMap
 
   To-Do's:
-  1. Prevent retreat owners from reviewing their retreat
-  2. create a total average review rating
-  3. redirect to last page on login form submit
-  4. better styling for MapBox popup styling
-  5. I do not like the category anchor links on index (redesign)
+  1. SHOW: Prevent retreat owners from reviewing their retreat
+  2. SHOW: Create a total average review rating
+  3. MAPS: Popup close on 2nd click or click off of popup
+  4. MAPS: Better styling for MapBox popup styling
+  5. INDEX: Redesign the category anchor links on the top of index.ejs
+  6. I'm not certain that sanitizeHtml is working, dbl-check (schemas.js)
+  7. home.Ejs: Image OK? Black overlay? Btn effect?
+  8. 
 */

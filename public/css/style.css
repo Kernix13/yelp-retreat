@@ -3,7 +3,9 @@
 /*
 font-family: 'Merriweather', serif;
 font-family: 'Poppins', sans-serif;
-// I want to change this - maybe Open Sans instead of Poppins
+
+font-family: 'Lora', Georgia, Palatino, 'Lucida Bright', Garamond, Didot, 'Times New Roman', serif;
+font-family: 'Oswald', Verdana, 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
 */
 
 *,
@@ -17,8 +19,8 @@ html {
 }
 
 body {
-  font-size: 16x;
-  font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-family: 'Oswald', Verdana, 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -27,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather', Palatino, Georgia, 'Lucida Bright', Garamond, Didot, 'Times New Roman', serif;
+  font-family: 'Lora', Georgia, Palatino, 'Lucida Bright', Garamond, Didot, 'Times New Roman', serif;
 }
 
 

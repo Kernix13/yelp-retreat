@@ -39,7 +39,6 @@ const csp = {
       'https://res.cloudinary.com/dc9ar9jbr/',
       'https://images.unsplash.com/',
     ],
-    fontSrc: ["'self'", ...fontSrcUrls],
   },
 }
 

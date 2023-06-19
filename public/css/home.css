@@ -1,4 +1,6 @@
 body {
+  font-size: 16px;
+  font-family: 'Oswald', Verdana, 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url('../images/retreat-home2.jpg');
@@ -6,6 +8,12 @@ body {
   background-position: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lora', Georgia, Palatino, 'Lucida Bright', Garamond, Didot, 'Times New Roman', serif;
 }
 
 //  https://unsplash.com/photos/twukN12EN7c
