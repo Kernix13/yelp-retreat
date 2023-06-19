@@ -124,5 +124,5 @@ app.listen(port, () => {
   5. INDEX: Redesign the category anchor links on the top of index.ejs
   6. I'm not certain that sanitizeHtml is working, dbl-check (schemas.js)
   7. home.Ejs: Image OK? Black overlay? Btn effect?
-  8. 
+  8. show.ejs: Use showtemplate.ejs instead of boilerplate? If so, remove link and script tag from show.ejs
 */
