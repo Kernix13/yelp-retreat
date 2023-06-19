@@ -31,7 +31,7 @@ const seedDB = async () => {
     const rand8 = Math.floor(Math.random() * 8);
     const price = Math.floor(Math.random() * 400) + 10;
     const retreat = new Retreat({
-      // localhost jimbo _id:
+      // localhost jimbo _id, uncomment when seeding locallly:
       // author: '647e595464c70dd9a61869cb',
       
       // MongoDB Atlas JimK _id:
@@ -39,7 +39,7 @@ const seedDB = async () => {
       location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores vero perferendis laudantium, consequuntur voluptatibus nulla architecto, sit soluta esse iure sed labore ipsam a cum nihil atque molestiae deserunt!',
-      type: `${retreatTypes[rand8].type}`, // retreatTypes
+      type: `${retreatTypes[rand8].type}`,
       date: '2023/10/15',
       events: `${retreatTypes[rand8].events}`,
       price,
