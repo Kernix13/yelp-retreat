@@ -52,7 +52,6 @@ module.exports.showRetreat = async (req, res) => {
     },
   })
   .populate('author');
-  // console.log(retreat);
   if (!retreat) {
     req.flash('error', 'Cannot find that retreat');
     return res.redirect('/retreats')
@@ -69,7 +68,6 @@ module.exports.renderEditForm = async (req, res) => {
 // 4b. Put route
 module.exports.updateRetreat = async (req, res) => {
   const { id } = req.params;
-  // console.log(req.body)
   const retreat = await Retreat.findByIdAndUpdate(id, { ...req.body.retreat });
   const imgs = req.files.map(img => ( {url: img.path, filename: img.filename }));
   retreat.images.push(...imgs);
