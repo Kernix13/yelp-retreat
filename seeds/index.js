@@ -49,12 +49,12 @@ const seedDB = async () => {
       },
       images: [
         {
-          url: 'https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/wnbvbiv2zqqwkykp3hrw.jpg',
-          filename: 'YelpRetreat/wnbvbiv2zqqwkykp3hrw',
+          url: 'https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/kzvazgzu4yltunyjmqua.jpg',
+          filename: 'YelpRetreat/kzvazgzu4yltunyjmqua',
         },
         {
-          url: 'https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504382/YelpRetreat/kzvazgzu4yltunyjmqua.jpg',
-          filename: 'YelpRetreat/kzvazgzu4yltunyjmqua',
+          url: 'https://res.cloudinary.com/dc9ar9jbr/image/upload/v1686504383/YelpRetreat/ehbrbcva6qzoobzsz8nq.jpg',
+          filename: 'YelpRetreat/ehbrbcva6qzoobzsz8nq',
         },
       ],
     })
