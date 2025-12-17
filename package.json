@@ -27,7 +27,7 @@
     "ejs-mate": "^4.0.0",
     "express": "^4.22.1",
     "express-mongo-sanitize": "^2.2.0",
-    "express-session": "^1.17.3",
+    "express-session": "^1.18.2",
     "helmet": "^7.0.0",
     "joi": "^17.9.2",
     "method-override": "^3.0.0",
