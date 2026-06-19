@@ -28,7 +28,7 @@
     "express": "^5.2.1",
     "express-mongo-sanitize": "^2.2.0",
     "express-session": "^1.18.2",
-    "helmet": "^7.0.0",
+    "helmet": "^8.1.0",
     "joi": "^18.2.1",
     "method-override": "^3.0.0",
     "mongoose": "^9.6.2",
